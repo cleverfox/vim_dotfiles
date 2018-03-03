@@ -28,8 +28,6 @@ endif
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
-
-  " Enable file type detection.
   " Use the default filetype settings, so that mail gets 'tw' set to 72,
   " 'cindent' is on in C files, etc.
   " Also load indent files, to automatically do language-dependent indenting.
@@ -49,13 +47,9 @@ if has("autocmd")
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
     \   exe "normal g`\"" |
     \ endif
-
   augroup END
-
 else
-
   set autoindent		" always set autoindenting on
-
 endif " has("autocmd")
 
 func Scratch()
@@ -148,6 +142,8 @@ Plugin 'alvan/vim-closetag'
 Plugin 'othree/html5.vim'
 Bundle 'airblade/vim-gitgutter'
 Plugin 'jlanzarotta/bufexplorer'
+Bundle 'gu-fan/colorv.vim'
+
 
 "set lcs=tab:>-,eol:<,trail:-,nbsp:%
 set lcs=tab:·\ ,eol:¶,nbsp:%
@@ -200,9 +196,11 @@ endif
 
 set laststatus=2
 
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-highlight notice term=bold,underline
-match notice /io\:format/
 
+
+"highlight MyNotice term=bold,underline
+"match MyNotice /io\:format/
+
+highlight ExtraWhitespace ctermbg=red
+match ExtraWhitespace / \+$/
 
