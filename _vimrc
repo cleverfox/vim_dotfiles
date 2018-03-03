@@ -119,6 +119,7 @@ nmap <silent> <Leader>] :tabnext<cr>
 nmap <silent> <Leader>[ :tabprevious<cr>
 nmap <silent> <Leader>= :tabnew<cr>
 nmap <silent> <Leader>p :NERDTreeToggle<cr>
+nnoremap <C-B> :BufExplorer<cr>
 set textwidth=100
 set cc=80
 
@@ -146,6 +147,7 @@ Bundle 'vim-erlang/vim-erlang-compiler'
 Plugin 'alvan/vim-closetag'
 Plugin 'othree/html5.vim'
 Bundle 'airblade/vim-gitgutter'
+Plugin 'jlanzarotta/bufexplorer'
 
 "set lcs=tab:>-,eol:<,trail:-,nbsp:%
 set lcs=tab:·\ ,eol:¶,nbsp:%
