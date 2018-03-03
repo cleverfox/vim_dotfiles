@@ -178,8 +178,8 @@ function! SyntaxItem()
   return synIDattr(synID(line("."),col("."),1),"name")
 endfunction
 if has('statusline')
-"  set statusline=%#Question#                   " set highlighting
-"  set statusline+=%-2.2n\                      " buffer number
+  set statusline=%#Question#                   " set highlighting
+  set statusline+=%-2.2n\                      " buffer number
   set statusline+=%#WarningMsg#                " set highlighting
   set statusline+=%f\                          " file name
   set statusline+=%#Question#                  " set highlighting
