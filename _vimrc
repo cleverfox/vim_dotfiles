@@ -98,11 +98,6 @@ imap <C-g> <esc><C-g>
 " map <F1> :!man <cword><cr>
 "man TAILQ_FOREACH | col -b | vim -c 'set ft=man' -c 'set nomod' -
 
-"source ~/.vim/vimrc
-"colorscheme vibrantink
-"colorscheme desert
-colorscheme cfox
-
 
 autocmd BufReadPost * loadview
 autocmd BufWritePost * mkview
@@ -143,6 +138,7 @@ Plugin 'othree/html5.vim'
 Bundle 'airblade/vim-gitgutter'
 Plugin 'jlanzarotta/bufexplorer'
 Bundle 'gu-fan/colorv.vim'
+Plugin 'vimplugin/showmarks'
 
 
 "set lcs=tab:>-,eol:<,trail:-,nbsp:%
@@ -196,6 +192,7 @@ endif
 
 set laststatus=2
 
+"ShowMarksOn
 
 
 "highlight MyNotice term=bold,underline
@@ -203,4 +200,11 @@ set laststatus=2
 
 highlight ExtraWhitespace ctermbg=red
 match ExtraWhitespace / \+$/
+
+"set t_Co=256
+
+"colorscheme vibrantink
+"colorscheme desert
+colorscheme cfox
+
 

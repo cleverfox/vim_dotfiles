@@ -2,11 +2,11 @@ hi clear
 if exists("syntax on")
     syntax reset
 endif
-let g:colors_name = "dante"
+let g:colors_name = "cfox"
 
 " General colors
 hi Normal   ctermfg=LightGray guifg=peachpuff3 guibg=black
-hi Directory    term=bold ctermfg=blue guifg=royalblue
+hi Directory    term=bold ctermfg=80 guifg=cyan
 hi ErrorMsg term=standout ctermfg=white ctermbg=red guifg=white guibg=red3
 hi NonText  term=bold ctermfg=darkgray guibg=gray3 guifg=gray20
 hi SpecialKey   term=bold ctermfg=darkgray guifg=gray30
@@ -36,21 +36,40 @@ hi Title    term=bold ctermfg=magenta gui=bold guifg=aquamarine
 " syntax hi colors
 hi Comment  term=bold ctermfg=darkcyan guifg=cyan4
 hi PreProc  term=underline ctermfg=5 guifg=dodgerblue4
+hi link Include     PreProc
+hi link Define      PreProc
+hi link Macro       PreProc
+hi link PreCondit   PreProc
 
 hi erlangAtom term=underline ctermfg=136 guifg=firebrick3
-hi Constant term=underline ctermfg=196 guifg=firebrick3
+hi Constant term=underline ctermfg=160 guifg=firebrick3
 hi String term=underline ctermfg=brown guifg=firebrick3
 hi link Character   Constant
 hi link Number      Constant
 hi link Boolean     Constant
-hi link Number      Constant
 
 hi Type     term=underline ctermfg=darkgreen gui=none guifg=chartreuse3
+hi link StorageClass    Type
+hi link Typedef     Type
+
 hi Statement    term=bold ctermfg=3 gui=none guifg=gold3
+hi link Conditional Statement
+hi link Repeat      Statement
+hi link Label       Statement
+hi link Keyword     Statement
+hi link Exception   Statement
+hi link Operator    Statement
+
 hi Fuction   term=underline ctermfg=31 guifg=darkolivegreen4
 hi Identifier   term=underline ctermfg=38 guifg=darkolivegreen4
 hi Ignore   term=bold ctermfg=darkgray guifg=gray45
 hi Special  term=underline ctermfg=5 guifg=sienna
+hi link Tag     Special
+hi link SpecialChar Special
+hi link Delimiter   Special
+hi link SpecialComment  Special
+hi link Debug       Special
+"
 hi Error    term=reverse ctermfg=gray ctermbg=red guifg=gray guibg=red3
 hi Todo     term=standout ctermfg=black ctermbg=yellow gui=bold guifg=gray10 guibg=yellow4
 hi Underlined   term=underline cterm=underline ctermfg=darkblue gui=underline guifg=slateblue
@@ -59,21 +78,4 @@ hi link Float       Number
 
 " syntax hi links
 "hi link Function    Identifier
-hi link Conditional Statement
-hi link Repeat      Statement
-hi link Label       Statement
-hi link Keyword     Statement
-hi link Exception   Statement
-hi link Operator    Statement
-hi link Include     PreProc
-hi link Define      PreProc
-hi link Macro       PreProc
-hi link PreCondit   PreProc
-hi link StorageClass    Type
-hi link Typedef     Type
-hi link Tag     Special
-hi link SpecialChar Special
-hi link Delimiter   Special
-hi link SpecialComment  Special
-hi link Debug       Special
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
